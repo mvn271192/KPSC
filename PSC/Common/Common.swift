@@ -16,11 +16,16 @@ import FirebaseDatabase
 
 let GROUP = "Groups"
 let USERS = "Users"
+let CATEGORY = "Category"
+let QUESTIONS = "Questions"
+
 let NameTag = 1, EmailTag = 2, PhotoTag = 3
 
 let Font = "Kefa"
 let FontSize = 16
 let FontForTextField = UIFont (name: Font, size: CGFloat(FontSize))
+let GreenColorTheme = UIColor(red: 0.01, green: 0.41, blue: 0.22, alpha: 1.0)
+let AppTitile = "PSC"
 
 final class Common {
     
@@ -37,7 +42,7 @@ final class Common {
     func setActitvityIndicator(inView view:UIView)->NVActivityIndicatorView
     {
         let nvactivity = NVActivityIndicatorView(frame: CGRect(x: 0
-            , y: 0, width: 50, height: 50), type: NVActivityIndicatorType.ballScaleMultiple, color: UIColor.green, padding: 0)
+            , y: 0, width: 50, height: 50), type: NVActivityIndicatorType.ballScaleMultiple, color: GreenColorTheme, padding: 0)
         view.addSubview(nvactivity)
         view.bringSubview(toFront: nvactivity)
         nvactivity.center = view.center

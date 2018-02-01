@@ -25,3 +25,10 @@ struct Answer {
     var name:String!
     var Id:Int!
 }
+
+struct QuestionCategory {
+    
+    var name:String!
+    var Id:Int!
+    var firebaseId:String!
+}

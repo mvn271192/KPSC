@@ -19,6 +19,7 @@
 		E0049D60201F8C6E00DF28A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0049D5F201F8C6E00DF28A3 /* Assets.xcassets */; };
 		E0049D63201F8C6E00DF28A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0049D61201F8C6E00DF28A3 /* LaunchScreen.storyboard */; };
 		E0049D6D201F956F00DF28A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0049D6C201F956F00DF28A3 /* GoogleService-Info.plist */; };
+		E0FF749A20220333009F575A /* AddQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FF749920220333009F575A /* AddQuestionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		E0049D62201F8C6E00DF28A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0049D64201F8C6E00DF28A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0049D6C201F956F00DF28A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E0FF749920220333009F575A /* AddQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionsViewController.swift; sourceTree = "<group>"; };
 		E7D43722256B28B6E842803A /* Pods_PSC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PSC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF17286EB1E7921C6BDCF385 /* Pods-PSC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PSC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PSC/Pods-PSC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +117,7 @@
 		E0049D57201F8C6E00DF28A3 /* PSC */ = {
 			isa = PBXGroup;
 			children = (
+				E0FF749920220333009F575A /* AddQuestionsViewController.swift */,
 				E0049D64201F8C6E00DF28A3 /* Info.plist */,
 				E0032FE32020AFE400AD7470 /* QuestionsViewController.swift */,
 				E0032FEA2020DC6400AD7470 /* Models */,
@@ -265,9 +268,9 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PSC/Pods-PSC-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle",
-				"$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseGoogleAuthUI.bundle",
-				"$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseGoogleAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebasePhoneAuthUI.bundle,
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -290,6 +293,7 @@
 				E0049D5B201F8C6E00DF28A3 /* ViewController.swift in Sources */,
 				E0032FE72020B13A00AD7470 /* Questions.swift in Sources */,
 				E0049D59201F8C6E00DF28A3 /* AppDelegate.swift in Sources */,
+				E0FF749A20220333009F575A /* AddQuestionsViewController.swift in Sources */,
 				E0032FE92020DC5A00AD7470 /* User.swift in Sources */,
 				E0032FE42020AFE400AD7470 /* QuestionsViewController.swift in Sources */,
 				E0032FEE2020DD3C00AD7470 /* Common.swift in Sources */,
