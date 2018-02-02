@@ -7,15 +7,58 @@
 //
 
 import Foundation
+import Firebase
 
 class Questions {
     
     var questions:String!
-    var questionId:Int!
+    var questionId:String!
     var answerId:Int!
     var options:[Answer] = []
+    var description:String?
     
-    init(questions: String, questionId: Int, answerId: Int, options: [Dictionary<String,Int>]) {
+    init(questions: String, questionId: String, answerId: Int, options: [Dictionary<String,Int>]) {
+        
+    }
+    
+    init(snapshot snap:DataSnapshot!)
+    {
+        if let data = snap {
+            let questionId = data.key
+            let questionData = data.value as! Dictionary<String,AnyObject>
+            
+            if let question = questionData["Question"] as! String!, question.count > 0
+            {
+                let options = questionData["Answers"] as! Dictionary<String,String>
+                self.questions = question
+                self.answerId = questionData["AnswerIndex"] as! Int!
+                self.questionId = questionId
+                if let des = questionData["Description"] as! String!
+                {
+                    self.description = des
+                }
+                else
+                {
+                    self.description = ""
+                }
+                if let arrayMembers = Array(options.values) as [String]!
+                {
+                    var i = 1
+                    for item in arrayMembers
+                    {
+                        let ans = Answer(name: item, Id: i)
+                        self.options.append(ans)
+                        i += 1
+                    }
+                }
+                else
+                {
+                    self.options = []
+                }
+                
+                
+            }
+        }
         
     }
 }

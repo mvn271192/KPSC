@@ -75,36 +75,24 @@ class AddQuestionsViewController: UIViewController {
         
         if let text1 = ansTextField1?.text, let text2 = ansTextField2?.text, let text3 = ansTextField3?.text, let text4 = ansTextField4?.text
         {
-            
-            let questionRef = databaseRef.child(QUESTIONS)
             let fireBaseCategoryId = categoryList[selectedCategoryId - 1].firebaseId as String
+            
             let answers = [
                 "Option1":text1,
                 "Option2":text2,
                 "Option3":text3,
                 "Option4":text4,
                 
-            ] as [String:Any]
+                ] as [String:Any]
             let questionData = [
                 "Question":question,
                 "Answers":answers,
                 "AnswerIndex":selectedButtonTag,
                 "CategoryId":fireBaseCategoryId ,
                 "Description":descriptionTextView.text
-            ] as [String:Any]
-            let questionHandle = questionRef.childByAutoId()
-            questionHandle.setValue(questionData, withCompletionBlock: { (error, data) in
-                if (error == nil)
-                {
-                    self.view.makeToast("Question added")
-                    
-                }
-                else
-                {
-                    self.view.makeToast("Error occured during adding question")
-                    return
-                }
-            })
+                ] as [String:Any]
+            
+            self.insertQuestion(questionData: questionData, categoryId: fireBaseCategoryId)
         }
         else
         {
@@ -258,6 +246,45 @@ class AddQuestionsViewController: UIViewController {
             
         }
        
+    }
+    
+    func insertQuestion(questionData: [String : Any], categoryId: String)
+    {
+        let questionRef = databaseRef.child(QUESTIONS)
+        
+      
+        let questionHandle = questionRef.childByAutoId()
+        questionHandle.setValue(questionData, withCompletionBlock: { (error, data) in
+            if (error == nil)
+            {
+                self.insertQuestionIdInCategory(categoryId: categoryId, questionId: questionHandle.key)
+                
+            }
+            else
+            {
+                self.view.makeToast("Error occured during adding question")
+                return
+            }
+        })
+    }
+    
+    func insertQuestionIdInCategory(categoryId: String, questionId: String)
+    {
+        let categoryRef = databaseRef.child(CATEGORY).child(categoryId).child("Questions")
+        categoryRef.child(questionId).setValue(true) { (error, dataRef) in
+            
+            if (error == nil)
+            {
+                self.view.makeToast("Question added")
+                
+            }
+            else
+            {
+                self.view.makeToast("Error occured during adding question")
+                return
+            }
+        }
+        
     }
 
     

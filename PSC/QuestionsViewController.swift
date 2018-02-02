@@ -7,19 +7,25 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class QuestionsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDataSourcePrefetching, UICollectionViewDelegateFlowLayout {
    
+
     @IBOutlet weak var mCollectionView: UICollectionView!
     var mQuestions:[Questions] = []
     fileprivate let reuseIdentifier = "collectionViewCell"
     fileprivate let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
     fileprivate let itemsPerRow: CGFloat = 1
+    private lazy var databaseRef: DatabaseReference = Database.database().reference()
     
+    let common = Common.common
 
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        observeQuestions()
 
         // Do any additional setup after loading the view.
     }
@@ -33,19 +39,13 @@ class QuestionsViewController: UIViewController, UICollectionViewDelegate, UICol
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 4
+        return mQuestions.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-//        if (indexPath.row % 2 == 0)
-//        {
-//            cell.backgroundColor = .yellow
-//        }
-//        else
-//        {
-//            cell.backgroundColor = .red
-//        }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! QuestionsCollectionViewCell
+        cell.setQuestion(question: mQuestions[indexPath.row])
+
         return cell
     }
     
@@ -57,7 +57,7 @@ class QuestionsViewController: UIViewController, UICollectionViewDelegate, UICol
         let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRow
         
-        return CGSize(width: widthPerItem, height: 170)
+        return CGSize(width: widthPerItem, height: 180)
     }
     
     
@@ -77,6 +77,39 @@ class QuestionsViewController: UIViewController, UICollectionViewDelegate, UICol
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
         
         
+    }
+    
+     // MARK: - FireBase Methods
+    
+    func observeQuestions()
+    {
+        let nvactivity = common.setActitvityIndicator(inView: self.view)
+        nvactivity.startAnimating()
+        
+        let questionRef = databaseRef.child(QUESTIONS)
+        questionRef.queryOrderedByValue().queryLimited(toFirst: 10).observe(.value) { (snapshot) in
+            
+            if snapshot.childrenCount == 0
+            {
+                nvactivity.stopAnimating()
+                self.view.makeToast("No Categories found")
+                return
+            }
+            
+            for item in snapshot.children
+            {
+                
+                let snap = item as! DataSnapshot
+                let question = Questions(snapshot: snap)
+                self.mQuestions.append(question)
+                
+                
+            }
+            DispatchQueue.main.async {
+                nvactivity.stopAnimating()
+                self.mCollectionView.reloadData()
+            }
+        }
     }
     
     
