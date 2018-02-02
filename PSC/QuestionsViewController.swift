@@ -25,7 +25,8 @@ class QuestionsViewController: UIViewController, UICollectionViewDelegate, UICol
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       let questionRef = Database.database().reference(withPath: QUESTIONS)
+        questionRef.keepSynced(true)
         observeQuestions()
 
         // Do any additional setup after loading the view.
@@ -91,13 +92,17 @@ class QuestionsViewController: UIViewController, UICollectionViewDelegate, UICol
     
     func observeQuestions()
     {
-        self.mQuestions.removeAll()
+        
         let nvactivity = common.setActitvityIndicator(inView: self.view)
         nvactivity.startAnimating()
         
         let questionRef = databaseRef.child(QUESTIONS)
-        questionRef.queryOrderedByValue().queryLimited(toFirst: 10).observe(.value) { (snapshot) in
+        //questionRef.queryOrdered(byChild: "date")
+        questionRef.queryOrdered(byChild: "date").queryLimited(toFirst: 10).observeSingleEvent(of: .value, with: { (snapshot) in
             
+        
+            
+            self.mQuestions.removeAll()
             if snapshot.childrenCount == 0
             {
                 nvactivity.stopAnimating()
@@ -116,9 +121,10 @@ class QuestionsViewController: UIViewController, UICollectionViewDelegate, UICol
             }
             DispatchQueue.main.async {
                 nvactivity.stopAnimating()
+                self.mQuestions = self.mQuestions.reversed()
                 self.mCollectionView.reloadData()
             }
-        }
+        })
     }
     
     

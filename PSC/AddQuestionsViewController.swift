@@ -76,12 +76,31 @@ class AddQuestionsViewController: UIViewController {
         if let text1 = ansTextField1?.text, let text2 = ansTextField2?.text, let text3 = ansTextField3?.text, let text4 = ansTextField4?.text
         {
             let fireBaseCategoryId = categoryList[selectedCategoryId - 1].firebaseId as String
+             let ans1 = [
+                "Name":text1,
+                "Id":1,
+            ] as [String:Any]
+            
+            let ans2 = [
+                "Name":text2,
+                "Id":2,
+                ] as [String:Any]
+            
+            let ans3 = [
+                "Name":text3,
+                "Id":3,
+                ] as [String:Any]
+            
+            let ans4 = [
+                "Name":text4,
+                "Id":4,
+                ] as [String:Any]
             
             let answers = [
-                "Option1":text1,
-                "Option2":text2,
-                "Option3":text3,
-                "Option4":text4,
+                "Option1":ans1,
+                "Option2":ans2,
+                "Option3":ans3,
+                "Option4":ans4,
                 
                 ] as [String:Any]
             let questionData = [
@@ -89,7 +108,8 @@ class AddQuestionsViewController: UIViewController {
                 "Answers":answers,
                 "AnswerIndex":selectedButtonTag,
                 "CategoryId":fireBaseCategoryId ,
-                "Description":descriptionTextView.text
+                "Description":descriptionTextView.text,
+                "date": [".sv": "timestamp"],
                 ] as [String:Any]
             
             self.insertQuestion(questionData: questionData, categoryId: fireBaseCategoryId)

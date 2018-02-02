@@ -16,6 +16,7 @@ class Questions {
     var answerId:Int!
     var options:[Answer] = []
     var description:String?
+    var answeredId:Int = 0
     
     init(questions: String, questionId: String, answerId: Int, options: [Dictionary<String,Int>]) {
         
@@ -29,7 +30,7 @@ class Questions {
             
             if let question = questionData["Question"] as! String!, question.count > 0
             {
-                let options = questionData["Answers"] as! Dictionary<String,String>
+                let options = questionData["Answers"] as! Dictionary<String,AnyObject>
                 self.questions = question
                 self.answerId = questionData["AnswerIndex"] as! Int!
                 self.questionId = questionId
@@ -41,14 +42,14 @@ class Questions {
                 {
                     self.description = ""
                 }
-                if let arrayMembers = Array(options.values) as [String]!
+                if options.values.count == 4
                 {
-                    var i = 1
-                    for item in arrayMembers
+                   // var i = 1
+                    for item in options.values
                     {
-                        let ans = Answer(name: item, Id: i)
+                        let ans = Answer(name: item["Name"] as! String, Id: item["Id"] as! Int)
                         self.options.append(ans)
-                        i += 1
+                       // i += 1
                     }
                 }
                 else

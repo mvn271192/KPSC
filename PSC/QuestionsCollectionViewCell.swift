@@ -21,6 +21,24 @@ class QuestionsCollectionViewCell: UICollectionViewCell {
         self.question = question
         questionLabel?.text = question.questions
         self.setAnswerButtons(answerList: question.options)
+        self.answerView.isUserInteractionEnabled = true
+        
+        if (self.question.answeredId != 0)
+        {
+            self.answerView.isUserInteractionEnabled = false
+            let btn = self.answerView.viewWithTag(self.question.answeredId) as! UIButton
+            if (self.question.answeredId == self.question.answerId){
+                
+                btn.setImage(#imageLiteral(resourceName: "RadioSelected"), for: .normal)
+            }
+            else
+            {
+                let correctbtn = self.answerView.viewWithTag(self.question.answerId) as! UIButton
+                correctbtn.setImage(#imageLiteral(resourceName: "RadioSelected"), for: .normal)
+                btn.setImage(#imageLiteral(resourceName: "RadioWrong"), for: .normal)
+            }
+            
+        }
         
         
     }
@@ -37,6 +55,7 @@ class QuestionsCollectionViewCell: UICollectionViewCell {
         {
             let btn = answerButtons[i]
             btn.setTitle(item.name, for: .normal)
+            btn.tag = item.Id
             i += 1
         }
     }
@@ -44,23 +63,31 @@ class QuestionsCollectionViewCell: UICollectionViewCell {
     @IBAction func answerButtonClick(_ sender: Any) {
         
         self.deselectAllbuttons()
+        
         let tapButton = sender as! UIButton
+        self.question.answeredId = tapButton.tag
+        self.answerView.isUserInteractionEnabled = false
+        
         if tapButton.tag == self.question.answerId
         {
-            let center = tapButton.center
+            let frame = tapButton.frame
             tapButton.setImage(#imageLiteral(resourceName: "RadioSelected"), for: .normal)
-            tapButton.center = center
+            tapButton.frame = frame
+            
+            self.makeToast("Right answer!")
             
         }
         else
         {
             let answerButton = answerView.viewWithTag(self.question.answerId) as! UIButton
-            let ansCenter = answerButton.center
-            let tapCenter = tapButton.center
+            let ansframe = answerButton.frame
+            let tapframe = tapButton.frame
             answerButton.setImage(#imageLiteral(resourceName: "RadioSelected"), for: .normal)
             tapButton.setImage(#imageLiteral(resourceName: "RadioWrong"), for: .normal)
-            answerButton.center = ansCenter
-            tapButton.center = tapCenter
+            answerButton.frame = ansframe
+            tapButton.frame = tapframe
+            
+            self.makeToast("Wrong answer!")
         }
     }
     
