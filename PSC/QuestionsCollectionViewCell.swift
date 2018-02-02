@@ -9,7 +9,7 @@
 import UIKit
 
 class QuestionsCollectionViewCell: UICollectionViewCell {
-    @IBOutlet var answerLabel: [UILabel]!
+   
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerView: UIView!
     
@@ -27,6 +27,7 @@ class QuestionsCollectionViewCell: UICollectionViewCell {
     
     func setAnswerButtons(answerList:[Answer])
     {
+        self.deselectAllbuttons()
         if answerList.count > 4
         {
             return
@@ -34,8 +35,8 @@ class QuestionsCollectionViewCell: UICollectionViewCell {
         var i = 0
         for item in answerList
         {
-            let label = answerLabel[i]
-            label.text = item.name
+            let btn = answerButtons[i]
+            btn.setTitle(item.name, for: .normal)
             i += 1
         }
     }
@@ -46,14 +47,20 @@ class QuestionsCollectionViewCell: UICollectionViewCell {
         let tapButton = sender as! UIButton
         if tapButton.tag == self.question.answerId
         {
+            let center = tapButton.center
             tapButton.setImage(#imageLiteral(resourceName: "RadioSelected"), for: .normal)
+            tapButton.center = center
             
         }
         else
         {
             let answerButton = answerView.viewWithTag(self.question.answerId) as! UIButton
+            let ansCenter = answerButton.center
+            let tapCenter = tapButton.center
             answerButton.setImage(#imageLiteral(resourceName: "RadioSelected"), for: .normal)
             tapButton.setImage(#imageLiteral(resourceName: "RadioWrong"), for: .normal)
+            answerButton.center = ansCenter
+            tapButton.center = tapCenter
         }
     }
     
@@ -63,6 +70,7 @@ class QuestionsCollectionViewCell: UICollectionViewCell {
         {
             item.setImage(#imageLiteral(resourceName: "RadioUnSelectd"), for: .normal)
             item.isSelected = false
+            item.imageView?.contentMode = .scaleAspectFit
         }
     }
     

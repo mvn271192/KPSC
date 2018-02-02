@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -78,13 +78,13 @@
                                                 <rect key="frame" x="10" y="60" width="355" height="160"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbe-Oi-cOp">
-                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="17.5"/>
                                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s3V-Gm-Ujq">
-                                                        <rect key="frame" x="0.0" y="27" width="355" height="133"/>
+                                                        <rect key="frame" x="0.0" y="27.5" width="355" height="132.5"/>
                                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
@@ -105,13 +105,13 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="355" height="30"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M8w-K2-4h5">
-                                                                <rect key="frame" x="0.0" y="0.0" width="268" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="267.5" height="30"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2Z-mg-mEy">
-                                                                <rect key="frame" x="278" y="0.0" width="77" height="30"/>
+                                                                <rect key="frame" x="277.5" y="0.0" width="77.5" height="30"/>
                                                                 <state key="normal" title="Right"/>
                                                                 <connections>
                                                                     <action selector="rightButtonClick:" destination="RtT-ch-bDs" eventType="touchUpInside" id="EDz-Me-wpe"/>
@@ -123,13 +123,13 @@
                                                         <rect key="frame" x="0.0" y="45" width="355" height="30"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JM6-7d-yUn">
-                                                                <rect key="frame" x="0.0" y="0.0" width="268" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="267.5" height="30"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPL-4V-1A8">
-                                                                <rect key="frame" x="278" y="0.0" width="77" height="30"/>
+                                                                <rect key="frame" x="277.5" y="0.0" width="77.5" height="30"/>
                                                                 <state key="normal" title="Right"/>
                                                                 <connections>
                                                                     <action selector="rightButtonClick:" destination="RtT-ch-bDs" eventType="touchUpInside" id="cgh-Om-9tK"/>
@@ -144,13 +144,13 @@
                                                         <rect key="frame" x="0.0" y="90" width="355" height="30"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DnD-i8-lbM">
-                                                                <rect key="frame" x="0.0" y="0.0" width="268" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="267.5" height="30"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaE-sb-B96">
-                                                                <rect key="frame" x="278" y="0.0" width="77" height="30"/>
+                                                                <rect key="frame" x="277.5" y="0.0" width="77.5" height="30"/>
                                                                 <state key="normal" title="Right"/>
                                                                 <connections>
                                                                     <action selector="rightButtonClick:" destination="RtT-ch-bDs" eventType="touchUpInside" id="FBm-wm-e9B"/>
@@ -165,13 +165,13 @@
                                                         <rect key="frame" x="0.0" y="135" width="355" height="30"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z1p-qR-Xjm">
-                                                                <rect key="frame" x="0.0" y="0.0" width="268" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="267.5" height="30"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ds4-gG-PcM">
-                                                                <rect key="frame" x="278" y="0.0" width="77" height="30"/>
+                                                                <rect key="frame" x="277.5" y="0.0" width="77.5" height="30"/>
                                                                 <state key="normal" title="Right"/>
                                                                 <connections>
                                                                     <action selector="rightButtonClick:" destination="RtT-ch-bDs" eventType="touchUpInside" id="8fj-c1-wdJ"/>
@@ -191,13 +191,13 @@
                                                 <rect key="frame" x="10" y="425" width="355" height="155.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acY-uD-QR6">
-                                                        <rect key="frame" x="0.0" y="0.0" width="78" height="15"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="78" height="17.5"/>
                                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="faT-7x-TY6">
-                                                        <rect key="frame" x="0.0" y="25" width="355" height="130.5"/>
+                                                        <rect key="frame" x="0.0" y="27.5" width="355" height="128"/>
                                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="13"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -311,14 +311,14 @@
         <!--Questions-->
         <scene sceneID="cQ0-cM-KmD">
             <objects>
-                <viewController id="QrH-Jd-BA4" customClass="QuestionsViewController" customModule="PSC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="QrH-Jd-BA4" customClass="QuestionsViewController" customModule="PSC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wXI-CK-3rf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="97b-8e-RLF">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ECQ-yM-SOo">
                                     <size key="itemSize" width="352" height="179"/>
                                     <size key="headerReferenceSize" width="0.0" height="10"/>
@@ -327,22 +327,22 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="Smw-oj-5uF" customClass="QuestionsCollectionViewCell" customModule="PSC" customModuleProvider="target">
-                                        <rect key="frame" x="11.5" y="10" width="352" height="180"/>
+                                        <rect key="frame" x="11.5" y="10" width="352" height="250"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="352" height="180"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="352" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZd-PD-h8T">
-                                                    <rect key="frame" x="13" y="26" width="325" height="50"/>
+                                                    <rect key="frame" x="5" y="18" width="341" height="66"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <string key="text">ഇതിലെ ഭൂരിഭാഗം നിര്‍ദ്ദേശങ്ങളും സര്‍ക്കാര്‍ അംഗീകരിച്ചിരുന്നു.  സുപ്രീംകോടതി ചീഫ് ജസ്റ്റിസിന് മാസം മുന്നുലക്ഷം രൂപയായിരുന്നു ഇവര്‍ ശമ്പളമായി നിര്‍ദ്ദേ...</string>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uq2-61-XMF">
-                                                    <rect key="frame" x="10" y="3" width="64" height="21"/>
+                                                    <rect key="frame" x="2" y="-5" width="64" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Xxz-wx-Ufp"/>
                                                     </constraints>
@@ -351,7 +351,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fyh-Je-3eG">
-                                                    <rect key="frame" x="10" y="78" width="62" height="21"/>
+                                                    <rect key="frame" x="2" y="86" width="62" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="BtX-h4-wmz"/>
                                                         <constraint firstAttribute="height" constant="21" id="rDo-kl-A8u"/>
@@ -361,130 +361,75 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="naq-7h-Zzg">
-                                                    <rect key="frame" x="10" y="104" width="332" height="66"/>
+                                                    <rect key="frame" x="2" y="112" width="348" height="136"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VIo-wy-BZP">
-                                                            <rect key="frame" x="5" y="3" width="322" height="60"/>
+                                                            <rect key="frame" x="5" y="3" width="338" height="130"/>
                                                             <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0rv-Vi-XWG">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="25"/>
-                                                                    <subviews>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GsP-1e-dfB">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="25"/>
-                                                                            <subviews>
-                                                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRU-WF-wU9">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
-                                                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                    <constraints>
-                                                                                        <constraint firstAttribute="height" constant="25" id="3Hl-Rr-AJf"/>
-                                                                                        <constraint firstAttribute="width" constant="25" id="9wQ-hh-5re"/>
-                                                                                    </constraints>
-                                                                                    <state key="normal" image="RadioUnSelectd"/>
-                                                                                    <connections>
-                                                                                        <action selector="answerButtonClick:" destination="Smw-oj-5uF" eventType="touchUpInside" id="RgI-K4-oWk"/>
-                                                                                    </connections>
-                                                                                </button>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOQ-jf-HmT">
-                                                                                    <rect key="frame" x="30" y="5" width="50" height="15.5"/>
-                                                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                    <constraints>
-                                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="3VP-RV-t54"/>
-                                                                                    </constraints>
-                                                                                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="13"/>
-                                                                                    <nil key="textColor"/>
-                                                                                    <nil key="highlightedColor"/>
-                                                                                </label>
-                                                                            </subviews>
-                                                                        </stackView>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="p5z-hv-9tl">
-                                                                            <rect key="frame" x="100" y="0.0" width="80" height="25"/>
-                                                                            <subviews>
-                                                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RV7-Pe-RFS">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
-                                                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                    <constraints>
-                                                                                        <constraint firstAttribute="height" constant="25" id="Aun-v2-DcQ"/>
-                                                                                        <constraint firstAttribute="width" constant="25" id="m51-7S-gRc"/>
-                                                                                    </constraints>
-                                                                                    <state key="normal" image="RadioUnSelectd"/>
-                                                                                    <connections>
-                                                                                        <action selector="answerButtonClick:" destination="Smw-oj-5uF" eventType="touchUpInside" id="iqo-KN-ZMC"/>
-                                                                                    </connections>
-                                                                                </button>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vI7-mY-QIe">
-                                                                                    <rect key="frame" x="30" y="5" width="50" height="15.5"/>
-                                                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                    <constraints>
-                                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="IcJ-fb-NNq"/>
-                                                                                    </constraints>
-                                                                                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="13"/>
-                                                                                    <nil key="textColor"/>
-                                                                                    <nil key="highlightedColor"/>
-                                                                                </label>
-                                                                            </subviews>
-                                                                        </stackView>
-                                                                    </subviews>
-                                                                </stackView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hpl-s8-Ig4">
-                                                                    <rect key="frame" x="0.0" y="35" width="180" height="25"/>
-                                                                    <subviews>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SC4-ev-NGM">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="25"/>
-                                                                            <subviews>
-                                                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mA-92-Pqn">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
-                                                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                    <constraints>
-                                                                                        <constraint firstAttribute="height" constant="25" id="Eji-Jh-yPx"/>
-                                                                                        <constraint firstAttribute="width" constant="25" id="HuH-Fr-0Wr"/>
-                                                                                    </constraints>
-                                                                                    <state key="normal" image="RadioUnSelectd"/>
-                                                                                    <connections>
-                                                                                        <action selector="answerButtonClick:" destination="Smw-oj-5uF" eventType="touchUpInside" id="mXE-7L-XUE"/>
-                                                                                    </connections>
-                                                                                </button>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1e-L2-HeE">
-                                                                                    <rect key="frame" x="30" y="5" width="50" height="15.5"/>
-                                                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                    <constraints>
-                                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="Yk5-ek-jXc"/>
-                                                                                    </constraints>
-                                                                                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="13"/>
-                                                                                    <nil key="textColor"/>
-                                                                                    <nil key="highlightedColor"/>
-                                                                                </label>
-                                                                            </subviews>
-                                                                        </stackView>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XgC-FF-cZF">
-                                                                            <rect key="frame" x="100" y="0.0" width="80" height="25"/>
-                                                                            <subviews>
-                                                                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nye-zY-BYf">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
-                                                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                    <constraints>
-                                                                                        <constraint firstAttribute="height" constant="25" id="H5b-I9-a11"/>
-                                                                                        <constraint firstAttribute="width" constant="25" id="cE3-BZ-gE8"/>
-                                                                                    </constraints>
-                                                                                    <state key="normal" image="RadioUnSelectd"/>
-                                                                                    <connections>
-                                                                                        <action selector="answerButtonClick:" destination="Smw-oj-5uF" eventType="touchUpInside" id="oVm-Uh-Jjn"/>
-                                                                                    </connections>
-                                                                                </button>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5s-1D-MhX">
-                                                                                    <rect key="frame" x="30" y="5" width="50" height="15.5"/>
-                                                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                    <constraints>
-                                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="927-hK-Fmk"/>
-                                                                                    </constraints>
-                                                                                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="13"/>
-                                                                                    <nil key="textColor"/>
-                                                                                    <nil key="highlightedColor"/>
-                                                                                </label>
-                                                                            </subviews>
-                                                                        </stackView>
-                                                                    </subviews>
-                                                                </stackView>
+                                                                <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="vRU-WF-wU9">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="102" height="25"/>
+                                                                    <color key="backgroundColor" red="1" green="0.99865635122072283" blue="0.051838637898203643" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="25" id="3Hl-Rr-AJf"/>
+                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="Wcy-L0-H3H"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
+                                                                    <inset key="titleEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="1"/>
+                                                                    <inset key="imageEdgeInsets" minX="1" minY="0.0" maxX="1" maxY="0.0"/>
+                                                                    <state key="normal" title="A. Ans 1" image="RadioUnSelectd">
+                                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="answerButtonClick:" destination="Smw-oj-5uF" eventType="touchUpInside" id="RgI-K4-oWk"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RV7-Pe-RFS">
+                                                                    <rect key="frame" x="0.0" y="35" width="66" height="25"/>
+                                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="25" id="Aun-v2-DcQ"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
+                                                                    <state key="normal" title="A2" image="RadioUnSelectd">
+                                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="answerButtonClick:" destination="Smw-oj-5uF" eventType="touchUpInside" id="iqo-KN-ZMC"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mA-92-Pqn">
+                                                                    <rect key="frame" x="0.0" y="70" width="48" height="25"/>
+                                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="25" id="Eji-Jh-yPx"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
+                                                                    <state key="normal" image="RadioUnSelectd">
+                                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="answerButtonClick:" destination="Smw-oj-5uF" eventType="touchUpInside" id="mXE-7L-XUE"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nye-zY-BYf">
+                                                                    <rect key="frame" x="0.0" y="105" width="48" height="25"/>
+                                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="25" id="H5b-I9-a11"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
+                                                                    <state key="normal" image="RadioUnSelectd">
+                                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="answerButtonClick:" destination="Smw-oj-5uF" eventType="touchUpInside" id="oVm-Uh-Jjn"/>
+                                                                    </connections>
+                                                                </button>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="vRU-WF-wU9" firstAttribute="leading" secondItem="VIo-wy-BZP" secondAttribute="leading" id="9C6-AP-3eX"/>
+                                                                <constraint firstItem="vRU-WF-wU9" firstAttribute="top" secondItem="VIo-wy-BZP" secondAttribute="top" id="MZ3-CL-agW"/>
+                                                            </constraints>
                                                         </stackView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -514,7 +459,7 @@
                                             <constraint firstItem="naq-7h-Zzg" firstAttribute="leading" secondItem="Smw-oj-5uF" secondAttribute="leadingMargin" constant="2" id="wMU-34-Zlj"/>
                                             <constraint firstItem="lZd-PD-h8T" firstAttribute="top" secondItem="Smw-oj-5uF" secondAttribute="topMargin" constant="18" id="xWM-vi-v11"/>
                                         </constraints>
-                                        <size key="customSize" width="352" height="180"/>
+                                        <size key="customSize" width="352" height="250"/>
                                         <connections>
                                             <outlet property="answerView" destination="naq-7h-Zzg" id="vIR-w9-vXW"/>
                                             <outlet property="questionLabel" destination="lZd-PD-h8T" id="cPM-Zc-F0k"/>
@@ -522,10 +467,6 @@
                                             <outletCollection property="answerButtons" destination="RV7-Pe-RFS" collectionClass="NSMutableArray" id="zW8-4u-Xz1"/>
                                             <outletCollection property="answerButtons" destination="4mA-92-Pqn" collectionClass="NSMutableArray" id="M5q-PT-UkY"/>
                                             <outletCollection property="answerButtons" destination="nye-zY-BYf" collectionClass="NSMutableArray" id="jEL-aq-43B"/>
-                                            <outletCollection property="answerLabel" destination="a5s-1D-MhX" collectionClass="NSMutableArray" id="Rwz-k8-Um5"/>
-                                            <outletCollection property="answerLabel" destination="vI7-mY-QIe" collectionClass="NSMutableArray" id="mgQ-Wq-aLg"/>
-                                            <outletCollection property="answerLabel" destination="TOQ-jf-HmT" collectionClass="NSMutableArray" id="Np7-jm-LaH"/>
-                                            <outletCollection property="answerLabel" destination="c1e-L2-HeE" collectionClass="NSMutableArray" id="rPV-Jd-7f8"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -536,7 +477,6 @@
                                 <connections>
                                     <outlet property="dataSource" destination="QrH-Jd-BA4" id="ZMJ-Az-0Bt"/>
                                     <outlet property="delegate" destination="QrH-Jd-BA4" id="jYd-iD-HYb"/>
-                                    <outlet property="prefetchDataSource" destination="QrH-Jd-BA4" id="uaC-RT-449"/>
                                 </connections>
                             </collectionView>
                         </subviews>
@@ -556,7 +496,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xps-bc-pmQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1604" y="-645"/>
+            <point key="canvasLocation" x="1604" y="-645.42728635682158"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="i7i-H8-wVq">

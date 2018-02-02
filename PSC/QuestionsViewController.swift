@@ -25,6 +25,7 @@ class QuestionsViewController: UIViewController, UICollectionViewDelegate, UICol
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         observeQuestions()
 
         // Do any additional setup after loading the view.
@@ -44,7 +45,14 @@ class QuestionsViewController: UIViewController, UICollectionViewDelegate, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! QuestionsCollectionViewCell
-        cell.setQuestion(question: mQuestions[indexPath.row])
+        
+       // DispatchQueue.global(qos: .background).async {
+            
+            cell.setQuestion(question: self.mQuestions[indexPath.row])
+            
+          
+     //   }
+        
 
         return cell
     }
@@ -57,7 +65,7 @@ class QuestionsViewController: UIViewController, UICollectionViewDelegate, UICol
         let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRow
         
-        return CGSize(width: widthPerItem, height: 180)
+        return CGSize(width: widthPerItem, height: 250)
     }
     
     
@@ -83,6 +91,7 @@ class QuestionsViewController: UIViewController, UICollectionViewDelegate, UICol
     
     func observeQuestions()
     {
+        self.mQuestions.removeAll()
         let nvactivity = common.setActitvityIndicator(inView: self.view)
         nvactivity.startAnimating()
         
