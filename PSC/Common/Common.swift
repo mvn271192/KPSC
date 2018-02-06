@@ -27,6 +27,10 @@ let FontForTextField = UIFont (name: Font, size: CGFloat(FontSize))
 let GreenColorTheme = UIColor(red: 0.01, green: 0.41, blue: 0.22, alpha: 1.0)
 let AppTitile = "PSC"
 
+enum DailyFeedsTypes {
+    case TextData, ImageOnly, Question
+}
+
 final class Common {
     
     private init() { }
