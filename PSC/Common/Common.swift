@@ -18,6 +18,7 @@ let GROUP = "Groups"
 let USERS = "Users"
 let CATEGORY = "Category"
 let QUESTIONS = "Questions"
+let NOTIFICATION = "Notifications"
 
 let NameTag = 1, EmailTag = 2, PhotoTag = 3
 
@@ -40,6 +41,7 @@ final class Common {
     static let common: Common = Common()
     
     var user:mUser!
+    var fireBaseMethods: FirebaseOperations = FirebaseOperations()
     
     
     

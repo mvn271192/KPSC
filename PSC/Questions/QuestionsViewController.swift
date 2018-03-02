@@ -50,6 +50,7 @@ class QuestionsViewController: UIViewController, UICollectionViewDelegate, UICol
        // DispatchQueue.global(qos: .background).async {
             
             cell.setQuestion(question: self.mQuestions[indexPath.row])
+           // common.dropShadow(color: .black, view: cell)
             
           
      //   }

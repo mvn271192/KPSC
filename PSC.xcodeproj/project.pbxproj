@@ -19,9 +19,15 @@
 		E0049D60201F8C6E00DF28A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0049D5F201F8C6E00DF28A3 /* Assets.xcassets */; };
 		E0049D63201F8C6E00DF28A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0049D61201F8C6E00DF28A3 /* LaunchScreen.storyboard */; };
 		E0049D6D201F956F00DF28A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0049D6C201F956F00DF28A3 /* GoogleService-Info.plist */; };
+		E01A79B6203B2F7000298C17 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01A79B5203B2F7000298C17 /* NotificationViewController.swift */; };
+		E01A79B8203B336200298C17 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01A79B7203B336200298C17 /* Notification.swift */; };
 		E072A25C2028C525005C6D3D /* DailyFeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E072A25B2028C525005C6D3D /* DailyFeedsViewController.swift */; };
 		E072A25F2028C826005C6D3D /* DailyFeedsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E072A25E2028C826005C6D3D /* DailyFeedsCollectionViewCell.swift */; };
 		E072A2612028CAE6005C6D3D /* DailyFeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = E072A2602028CAE6005C6D3D /* DailyFeeds.swift */; };
+		E0BF4354203DBBD50008410F /* AdminStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0BF4353203DBBD50008410F /* AdminStoryboard.storyboard */; };
+		E0BF4356203DD9830008410F /* AdminNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BF4355203DD9830008410F /* AdminNotificationViewController.swift */; };
+		E0BF4358203DE53E0008410F /* FirebaseOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BF4357203DE53E0008410F /* FirebaseOperations.swift */; };
+		E0C9743220459FCA008EC716 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C9743120459FCA008EC716 /* DetailsViewController.swift */; };
 		E0FBDE8120235A25007F36B7 /* QuestionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FBDE8020235A25007F36B7 /* QuestionsCollectionViewCell.swift */; };
 		E0FF749A20220333009F575A /* AddQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FF749920220333009F575A /* AddQuestionsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -41,9 +47,15 @@
 		E0049D62201F8C6E00DF28A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0049D64201F8C6E00DF28A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0049D6C201F956F00DF28A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E01A79B5203B2F7000298C17 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		E01A79B7203B336200298C17 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		E072A25B2028C525005C6D3D /* DailyFeedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFeedsViewController.swift; sourceTree = "<group>"; };
 		E072A25E2028C826005C6D3D /* DailyFeedsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFeedsCollectionViewCell.swift; sourceTree = "<group>"; };
 		E072A2602028CAE6005C6D3D /* DailyFeeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFeeds.swift; sourceTree = "<group>"; };
+		E0BF4353203DBBD50008410F /* AdminStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdminStoryboard.storyboard; sourceTree = "<group>"; };
+		E0BF4355203DD9830008410F /* AdminNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminNotificationViewController.swift; sourceTree = "<group>"; };
+		E0BF4357203DE53E0008410F /* FirebaseOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseOperations.swift; sourceTree = "<group>"; };
+		E0C9743120459FCA008EC716 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		E0FBDE8020235A25007F36B7 /* QuestionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsCollectionViewCell.swift; sourceTree = "<group>"; };
 		E0FF749920220333009F575A /* AddQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionsViewController.swift; sourceTree = "<group>"; };
 		E7D43722256B28B6E842803A /* Pods_PSC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PSC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +105,7 @@
 				E0032FE62020B13A00AD7470 /* Questions.swift */,
 				E0032FE82020DC5A00AD7470 /* User.swift */,
 				E072A2602028CAE6005C6D3D /* DailyFeeds.swift */,
+				E01A79B7203B336200298C17 /* Notification.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -101,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				E0032FED2020DD3C00AD7470 /* Common.swift */,
+				E0BF4357203DE53E0008410F /* FirebaseOperations.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -126,6 +140,7 @@
 		E0049D57201F8C6E00DF28A3 /* PSC */ = {
 			isa = PBXGroup;
 			children = (
+				E01A79B4203B2F3700298C17 /* Notifications */,
 				E072A25A2028C4F0005C6D3D /* Questions */,
 				E0049D64201F8C6E00DF28A3 /* Info.plist */,
 				E0032FEA2020DC6400AD7470 /* Models */,
@@ -138,8 +153,19 @@
 				E0032FEB2020DD0700AD7470 /* LoginViewController.swift */,
 				E0032FEF2020DD9C00AD7470 /* Common */,
 				E072A25D2028C7F2005C6D3D /* DailyFeeds */,
+				E0BF4353203DBBD50008410F /* AdminStoryboard.storyboard */,
+				E0BF4355203DD9830008410F /* AdminNotificationViewController.swift */,
 			);
 			path = PSC;
+			sourceTree = "<group>";
+		};
+		E01A79B4203B2F3700298C17 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				E01A79B5203B2F7000298C17 /* NotificationViewController.swift */,
+				E0C9743120459FCA008EC716 /* DetailsViewController.swift */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 		E072A25A2028C4F0005C6D3D /* Questions */ = {
@@ -226,6 +252,7 @@
 				E0049D63201F8C6E00DF28A3 /* LaunchScreen.storyboard in Resources */,
 				E0049D6D201F956F00DF28A3 /* GoogleService-Info.plist in Resources */,
 				E0049D60201F8C6E00DF28A3 /* Assets.xcassets in Resources */,
+				E0BF4354203DBBD50008410F /* AdminStoryboard.storyboard in Resources */,
 				E0049D5E201F8C6E00DF28A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,12 +347,17 @@
 				E0032FEC2020DD0700AD7470 /* LoginViewController.swift in Sources */,
 				E072A25F2028C826005C6D3D /* DailyFeedsCollectionViewCell.swift in Sources */,
 				E0FBDE8120235A25007F36B7 /* QuestionsCollectionViewCell.swift in Sources */,
+				E0BF4356203DD9830008410F /* AdminNotificationViewController.swift in Sources */,
 				E0049D5B201F8C6E00DF28A3 /* ViewController.swift in Sources */,
 				E0032FE72020B13A00AD7470 /* Questions.swift in Sources */,
 				E072A2612028CAE6005C6D3D /* DailyFeeds.swift in Sources */,
 				E0049D59201F8C6E00DF28A3 /* AppDelegate.swift in Sources */,
+				E0BF4358203DE53E0008410F /* FirebaseOperations.swift in Sources */,
+				E0C9743220459FCA008EC716 /* DetailsViewController.swift in Sources */,
 				E0FF749A20220333009F575A /* AddQuestionsViewController.swift in Sources */,
 				E0032FE92020DC5A00AD7470 /* User.swift in Sources */,
+				E01A79B6203B2F7000298C17 /* NotificationViewController.swift in Sources */,
+				E01A79B8203B336200298C17 /* Notification.swift in Sources */,
 				E0032FE42020AFE400AD7470 /* QuestionsViewController.swift in Sources */,
 				E072A25C2028C525005C6D3D /* DailyFeedsViewController.swift in Sources */,
 				E0032FEE2020DD3C00AD7470 /* Common.swift in Sources */,

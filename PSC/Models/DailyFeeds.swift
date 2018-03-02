@@ -7,8 +7,13 @@
 //
 
 import Foundation
+import UIKit
 
 class DailyFeeds {
 
     var type:DailyFeedsTypes = .TextData
+    var textData:String?
+    var titile:String?
+    var image:UIImage?
+    var answer:String?
 }
