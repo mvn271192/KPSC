@@ -521,7 +521,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mYo-2P-pqR">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mYo-2P-pqR">
                                                     <rect key="frame" x="15" y="0.0" width="325" height="79.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="15"/>
@@ -606,12 +606,16 @@
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://stackoverflow.com/questions/12789013/ios-multi-line-uilabel-in-auto-layout" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2US-I0-TCn">
                                                                 <rect key="frame" x="65" y="0.0" width="290" height="32.5"/>
+                                                                <gestureRecognizers/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="DtI-aI-583"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
                                                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="rwO-IU-QEX" appends="YES" id="N2o-5d-agH"/>
+                                                                </connections>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
@@ -627,6 +631,9 @@
                                                         <state key="normal" title="Share " image="ShareIcon">
                                                             <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="shareButtoncCick:" destination="FQU-FK-JzV" eventType="touchUpInside" id="Qj1-hn-9A2"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your data will be downloaded and filtered on the client. Consider adding " lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSW-Qb-P65">
                                                         <rect key="frame" x="5" y="10" width="355" height="37"/>
@@ -675,7 +682,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="aQB-JL-gqX" secondAttribute="bottom" id="3cq-WW-ADr"/>
+                            <constraint firstAttribute="bottom" secondItem="aQB-JL-gqX" secondAttribute="bottom" priority="250" id="3cq-WW-ADr"/>
                             <constraint firstItem="043-8u-ShK" firstAttribute="width" secondItem="axe-fX-ygA" secondAttribute="width" id="8Kl-yL-lxJ"/>
                             <constraint firstItem="aQB-JL-gqX" firstAttribute="leading" secondItem="axe-fX-ygA" secondAttribute="leading" id="hNd-zK-Pyg"/>
                             <constraint firstAttribute="trailing" secondItem="aQB-JL-gqX" secondAttribute="trailing" id="o2t-Vn-vZ3"/>
@@ -685,16 +692,23 @@
                         <viewLayoutGuide key="safeArea" id="I53-Cv-j5K"/>
                     </view>
                     <connections>
-                        <outlet property="conetentView" destination="043-8u-ShK" id="eVf-Ct-31T"/>
                         <outlet property="contentLabel" destination="pDa-rn-8GU" id="QlL-Th-3a6"/>
+                        <outlet property="contentView" destination="043-8u-ShK" id="73e-jX-PMP"/>
+                        <outlet property="dataContenntView" destination="IpA-TB-zy6" id="xov-80-KsV"/>
                         <outlet property="imageView" destination="zda-mf-FLq" id="KXy-uG-O3H"/>
                         <outlet property="mainScrollView" destination="aQB-JL-gqX" id="f0H-Rg-yzg"/>
+                        <outlet property="shareButton" destination="iJZ-XK-PYv" id="6qU-00-YIe"/>
                         <outlet property="shareButtonClick" destination="iJZ-XK-PYv" id="pc5-Si-RnA"/>
-                        <outlet property="titleLabel" destination="cSW-Qb-P65" id="QOk-ng-MHz"/>
+                        <outlet property="titileLabel" destination="cSW-Qb-P65" id="QOk-ng-MHz"/>
                         <outlet property="urlLabel" destination="2US-I0-TCn" id="1tN-ub-esE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWu-QX-r9M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="rwO-IU-QEX">
+                    <connections>
+                        <action selector="urlTap:" destination="FQU-FK-JzV" id="HmF-Jw-w4x"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1110" y="2130"/>
         </scene>

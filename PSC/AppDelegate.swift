@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
       //  window?.tintColor = themeColor
         
-        
+//        
 //        self.window = UIWindow(frame: UIScreen.main.bounds)
 //        
 //        let storyboard = UIStoryboard(name: "AdminStoryboard", bundle: nil)
@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let initialViewController = storyboard.instantiateViewController(withIdentifier: "adminNAV")
 //        
 //        self.window?.rootViewController = initialViewController
-        //self.window?.makeKeyAndVisible()
+//        self.window?.makeKeyAndVisible()
         
         return true
     }
@@ -42,11 +42,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
         
         
-        // Load Storyboard with name: iPhone4
-//        var mainView: UIStoryboard!
-//        mainView = UIStoryboard(name: "adminStoryboard", bundle: nil)
-//        let viewcontroller : UIViewController = mainView.instantiateViewController(withIdentifier: "iPhone4") as UIViewController
-//        self.window!.rootViewController = viewcontroller
+        // Load Storyboard with name
+      
         
       
     }

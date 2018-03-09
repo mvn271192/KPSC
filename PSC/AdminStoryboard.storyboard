@@ -33,7 +33,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Gab-ov-smv">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" text="Gathering of people celebrating Holi, India" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Gab-ov-smv">
                                                 <rect key="frame" x="0.0" y="30.5" width="365" height="97"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -53,7 +53,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lrG-PS-DAd">
-                                        <rect key="frame" x="0.0" y="157.5" width="365" height="134"/>
+                                        <rect key="frame" x="0.0" y="157.5" width="365" height="187.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPs-wa-tgF">
                                                 <rect key="frame" x="0.0" y="0.0" width="61.5" height="20.5"/>
@@ -65,11 +65,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dta-rr-HAB">
-                                                <rect key="frame" x="0.0" y="30.5" width="365" height="103.5"/>
+                                                <rect key="frame" x="0.0" y="30.5" width="365" height="157"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="103.5" id="2cz-ae-qpz"/>
                                                 </constraints>
+                                                <string key="text">Holi, the festival of colours is a celebration of the eternal victory of good over evil. It also signifies the end of winter, the beginning of spring, and a perfect day to party! Celebrated on the full moon day falling inHoli, the festival of colours is a celebration of the eternal victory of good over evil. It also signifies the end of winter, the beginning of spring, and a perfect day to party! Celebrated on the full moon day falling in</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" smartInsertDeleteType="yes"/>
                                             </textView>
@@ -83,7 +84,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cqt-8G-ZGs">
-                                        <rect key="frame" x="0.0" y="321.5" width="365" height="127.5"/>
+                                        <rect key="frame" x="0.0" y="375" width="365" height="127.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4h-zW-kkT">
                                                 <rect key="frame" x="0.0" y="0.0" width="32.5" height="20.5"/>
@@ -94,7 +95,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xeo-FX-udI">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" text="https://www.bing.com/search?q=holi+celebrations&amp;filters=HpDate%3a%2220180301_1830%22&amp;FORM=HPCAPT" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xeo-FX-udI">
                                                 <rect key="frame" x="0.0" y="30.5" width="365" height="97"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -102,6 +103,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" smartInsertDeleteType="yes"/>
+                                                <dataDetectorType key="dataDetectorTypes" shipmentTrackingNumber="YES"/>
                                             </textView>
                                         </subviews>
                                         <constraints>
@@ -115,7 +117,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2iT-7E-OS5">
-                                        <rect key="frame" x="0.0" y="479" width="365" height="114"/>
+                                        <rect key="frame" x="0.0" y="532.5" width="365" height="60.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Bc-Uj-FW1">
                                                 <rect key="frame" x="0.0" y="0.0" width="83.5" height="20.5"/>
@@ -126,24 +128,25 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="4" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VPP-dh-sdt">
-                                                <rect key="frame" x="0.0" y="30.5" width="365" height="83.5"/>
-                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="83.5" id="gqh-Xw-vXD"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" smartInsertDeleteType="yes"/>
-                                            </textView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8i2-og-rZI">
+                                                <rect key="frame" x="0.0" y="30.5" width="320" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moa-yL-BBu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                                                        <state key="normal" title="Select Image"/>
+                                                        <connections>
+                                                            <action selector="selectImageButtonClick:" destination="XnW-Bu-Gl5" eventType="touchUpInside" id="e3r-kc-NeN"/>
+                                                        </connections>
+                                                    </button>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="34q-fX-ggy">
+                                                        <rect key="frame" x="170" y="14" width="150" height="2"/>
+                                                    </progressView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="6Bc-Uj-FW1" firstAttribute="leading" secondItem="2iT-7E-OS5" secondAttribute="leading" id="8ou-gs-qZg"/>
-                                            <constraint firstItem="VPP-dh-sdt" firstAttribute="top" secondItem="6Bc-Uj-FW1" secondAttribute="bottom" constant="10" id="ChT-s1-XRx"/>
-                                            <constraint firstAttribute="bottom" secondItem="VPP-dh-sdt" secondAttribute="bottom" id="FPj-r1-h7K"/>
                                             <constraint firstItem="6Bc-Uj-FW1" firstAttribute="top" secondItem="2iT-7E-OS5" secondAttribute="top" id="Gbw-sk-fTr"/>
-                                            <constraint firstAttribute="trailing" secondItem="VPP-dh-sdt" secondAttribute="trailing" id="cvj-sJ-uiQ"/>
-                                            <constraint firstItem="VPP-dh-sdt" firstAttribute="leading" secondItem="2iT-7E-OS5" secondAttribute="leading" id="mhC-h7-1Hg"/>
-                                            <constraint firstItem="VPP-dh-sdt" firstAttribute="top" secondItem="6Bc-Uj-FW1" secondAttribute="bottom" constant="10" id="o3t-EX-kGA"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -185,6 +188,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="progressView" destination="34q-fX-ggy" id="qIs-hb-VTT"/>
                         <outlet property="saveButton" destination="n0f-yu-2Cm" id="7qZ-lm-6J5"/>
                     </connections>
                 </viewController>

@@ -21,6 +21,8 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let notifiRef = Database.database().reference(withPath: NOTIFICATION)
+        notifiRef.keepSynced(true)
         
         self.getNotifications()
         
@@ -72,7 +74,7 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 90
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -105,7 +107,7 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
     
     func getNotifications()
     {
-        common.fireBaseMethods.getValuesFromFireBase(root: NOTIFICATION, limit: 10, orderBy: "date") { (success, snapshot) in
+        common.fireBaseMethods.getValuesFromFireBase(root: NOTIFICATION, limit: 100, orderBy: "date") { (success, snapshot) in
             
             if snapshot.childrenCount > 0
             {
@@ -114,10 +116,11 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
                     let snap = item as! DataSnapshot
                     print(snap)
                     let order = OrderBydate(snapshot: snap)
-                    self.mNotificationList.append(order)
+                    self.mNotificationList.insert(order, at: 0)
                     
                     
                 }
+                
                 self.mNotificationTableView.reloadData()
             }
         }

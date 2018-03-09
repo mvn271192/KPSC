@@ -26,7 +26,7 @@ class DailyFeedsCollectionViewCell: UICollectionViewCell {
             height = self.createQuestion(question: self.dailyFeeds.textData!, answer: self.dailyFeeds.answer!)
             break;
         case .ImageOnly:
-            height = self.createImage(image: self.dailyFeeds.image)
+           // height = self.createImage(image: self.dailyFeeds.imageURL)
             break;
             
         }

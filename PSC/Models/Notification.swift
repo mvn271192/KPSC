@@ -16,19 +16,21 @@ class Notification {
     var content: String!
     var link: String?
     var imageUrl: String?
+    var dateStamp: Int!
    
 
     init(dataDictionary: NSMutableDictionary) {
         
-        print(dataDictionary)
+        
         self.titile = dataDictionary.value(forKey: "title") as! String
         self.content = dataDictionary.value(forKey: "content") as! String
+        self.dateStamp = dataDictionary.value(forKey: "date") as! Int
         if let url = dataDictionary.value(forKey: "url") as? String
         {
             self.link = url
         }
         
-        if let imageUrl = dataDictionary.value(forKey: "imageUrl") as? String
+        if let imageUrl = dataDictionary.value(forKey: "imageURL") as? String
         {
             self.imageUrl = imageUrl
         }
@@ -62,6 +64,7 @@ struct OrderBydate
                     self.notifications.append(notification)
                     
                 }
+                self.notifications.sort(by: {$0.dateStamp > $1.dateStamp})
             }
          
         }

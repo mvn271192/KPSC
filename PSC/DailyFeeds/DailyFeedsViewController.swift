@@ -23,6 +23,8 @@ class DailyFeedsViewController: UIViewController, UICollectionViewDelegate, UICo
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Do any additional setup after loading the view.
     }
@@ -91,6 +93,27 @@ class DailyFeedsViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     // MARK: - FireBase Methods
+    
+    func getData()
+    {
+        common.fireBaseMethods.getValuesFromFireBase(root:DAILY_FEEDS , limit: 50, orderBy: "date") { (success, snapshot) in
+            
+            if snapshot.childrenCount > 0
+            {
+                for item in snapshot.children
+                {
+                    let snap = item as! DataSnapshot
+                    print(snap)
+                    let order = DailyFeeds(snapshot: snap)
+                    self.mDailyFeeds.insert(order, at: 0)
+                    
+                    
+                }
+                
+                self.mCollectionView.reloadData()
+            }
+        }
+    }
 
     /*
     // MARK: - Navigation

@@ -21,11 +21,19 @@ class FirebaseOperations
     func getValuesFromFireBase(root: String, limit: Int, orderBy: String, completionHandler:  @escaping CompletionHandler)  {
         
         let dbRef = databaseRef.child(root)
+//        dbRef.queryOrderedByValue()
         dbRef.queryOrdered(byChild: orderBy).queryLimited(toFirst: UInt(limit)).observeSingleEvent(of: .value, with: { (snapshot) in
-            
+
             completionHandler(true,snapshot)
-           
+
 
         })
+        
+//        dbRef.queryOrderedByValue().queryLimited(toLast: UInt(30)).observeSingleEvent(of: .value, with: { (snapshot) in
+//
+//            completionHandler(true,snapshot)
+//
+//
+//        })
     }
 }

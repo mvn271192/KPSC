@@ -10,7 +10,7 @@ import Foundation
 import NVActivityIndicatorView
 import Toast_Swift
 import UIKit
-import DynamicBlurView
+//import DynamicBlurView
 import Firebase
 import FirebaseDatabase
 
@@ -19,6 +19,9 @@ let USERS = "Users"
 let CATEGORY = "Category"
 let QUESTIONS = "Questions"
 let NOTIFICATION = "Notifications"
+let DAILY_FEEDS = "DailyFeeds"
+
+let NOTIFICATION_PHOTOS = "NotificationPhotos"
 
 let NameTag = 1, EmailTag = 2, PhotoTag = 3
 
@@ -69,13 +72,53 @@ final class Common {
         view.layer.rasterizationScale = scale ? UIScreen.main.scale : 1
     }
     
-    func getBlurEffectView(view: UIView)->DynamicBlurView
-    {
+//    func getBlurEffectView(view: UIView)->DynamicBlurView
+//    {
+//
+//
+//        let blurView = DynamicBlurView(frame: view.bounds)
+//        blurView.blurRadius = 10
+//
+//        return blurView
+//}
+    func topViewController()-> UIViewController{
+        var topViewController:UIViewController = UIApplication.shared.keyWindow!.rootViewController!
         
+        while ((topViewController.presentedViewController) != nil) {
+            topViewController = topViewController.presentedViewController!;
+        }
         
-        let blurView = DynamicBlurView(frame: view.bounds)
-        blurView.blurRadius = 10
+        return topViewController
+    }
+    
+    func showShareActivity(msg:String?, image:UIImage?, url:String?, sourceRect:CGRect?){
+        var objectsToShare = [AnyObject]()
         
-        return blurView
+        if let url = url {
+            objectsToShare = [url as AnyObject]
+        }
+        
+        if let image = image {
+            objectsToShare = [image as AnyObject]
+        }
+        
+        if let msg = msg {
+            objectsToShare = [msg as AnyObject]
+        }
+        
+        let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        activityVC.modalPresentationStyle = .popover
+        activityVC.popoverPresentationController?.sourceView = topViewController().view
+        if let sourceRect = sourceRect {
+            activityVC.popoverPresentationController?.sourceRect = sourceRect
+        }
+        
+        topViewController().present(activityVC, animated: true, completion: nil)
+    }
 }
+
+extension Date {
+    func timeStamp() -> Int64! {
+        return Int64(self.timeIntervalSince1970 * 1000)
+    }
 }

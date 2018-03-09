@@ -1,6 +1,5 @@
 PODS:
   - DropDown (2.0.2)
-  - DynamicBlurView (2.0.1)
   - Firebase/Auth (4.8.0):
     - Firebase/Core
     - FirebaseAuth (= 4.4.1)
@@ -10,6 +9,9 @@ PODS:
   - Firebase/Database (4.8.0):
     - Firebase/Core
     - FirebaseDatabase (= 4.1.3)
+  - Firebase/Storage (4.8.0):
+    - Firebase/Core
+    - FirebaseStorage (= 2.1.1)
   - FirebaseAnalytics (4.0.5):
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
@@ -27,6 +29,10 @@ PODS:
     - leveldb-library (~> 1.18)
   - FirebaseInstanceID (2.0.8):
     - FirebaseCore (~> 4.0)
+  - FirebaseStorage (2.1.1):
+    - FirebaseAnalytics (~> 4.0)
+    - FirebaseCore (~> 4.0)
+    - GTMSessionFetcher/Core (~> 1.1)
   - FirebaseUI/Auth (4.5.0):
     - Firebase/Auth (~> 4.2)
   - FirebaseUI/Google (4.5.0):
@@ -57,6 +63,30 @@ PODS:
   - GTMSessionFetcher/Full (1.1.12):
     - GTMSessionFetcher/Core (= 1.1.12)
   - leveldb-library (1.20)
+  - libwebp (0.6.0):
+    - libwebp/core (= 0.6.0)
+    - libwebp/dec (= 0.6.0)
+    - libwebp/demux (= 0.6.0)
+    - libwebp/dsp (= 0.6.0)
+    - libwebp/enc (= 0.6.0)
+    - libwebp/mux (= 0.6.0)
+    - libwebp/utils (= 0.6.0)
+    - libwebp/webp (= 0.6.0)
+  - libwebp/core (0.6.0):
+    - libwebp/webp
+  - libwebp/dec (0.6.0):
+    - libwebp/core
+  - libwebp/demux (0.6.0):
+    - libwebp/core
+  - libwebp/dsp (0.6.0):
+    - libwebp/core
+  - libwebp/enc (0.6.0):
+    - libwebp/core
+  - libwebp/mux (0.6.0):
+    - libwebp/core
+  - libwebp/utils (0.6.0):
+    - libwebp/core
+  - libwebp/webp (0.6.0)
   - M13Checkbox (3.2.1)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -66,43 +96,47 @@ PODS:
   - NVActivityIndicatorView (4.1.1):
     - NVActivityIndicatorView/Presenter (= 4.1.1)
   - NVActivityIndicatorView/Presenter (4.1.1)
-  - SkyFloatingLabelTextField (3.4.0)
+  - SDWebImage/Core (4.2.2)
+  - SDWebImage/WebP (4.2.2):
+    - libwebp
+    - SDWebImage/Core
   - Toast-Swift (3.0.1)
 
 DEPENDENCIES:
   - DropDown
-  - DynamicBlurView
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
+  - Firebase/Storage
   - FirebaseUI/Google
   - FirebaseUI/Phone
   - M13Checkbox
   - NVActivityIndicatorView
-  - SkyFloatingLabelTextField (~> 3.0)
+  - SDWebImage/WebP
   - Toast-Swift (~> 3.0.1)
 
 SPEC CHECKSUMS:
   DropDown: 75562633a203f57a917021b4edb96c76f293b0ec
-  DynamicBlurView: 5e6babd80cc0ddfd3ddfc4f5dacf2fe4181e7c52
   Firebase: 710decbbc6d9d48530e9a5dba3209740c3532e05
   FirebaseAnalytics: 5b02a63ead2c3f0259cfc7f15e053e440587ecf8
   FirebaseAuth: dc0dd403beca5b2b016aac89c2d0b8dad1c81926
   FirebaseCore: 3c02ec652db3d03fdc8bc6d9154af3e20d64b6f5
   FirebaseDatabase: 7088bfc4af2cc00231bb36e1404fc2d7509eb4dc
   FirebaseInstanceID: 81df5805a08001e69138664bdd02c6719a9ac80f
+  FirebaseStorage: ab08d1c93a2feffa038fdd6693088b310ab1e6c6
   FirebaseUI: 883482fea73b73bbb488c55176f4c6ad128957eb
   GoogleSignIn: 3fdaa34a2ba04dbd7a25d7db39aecb0da98d5bdc
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  libwebp: 1d5a07c2eb97f9c31bd5f154bb82efc0ea67c6a2
   M13Checkbox: 12376f5b128189432508c240e4a36dc945ab7e4e
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
-  SkyFloatingLabelTextField: 703aa1420b697392b1e7dba25571180dde018477
+  SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
 
-PODFILE CHECKSUM: a8c649a8f91370d48289507b926203d70b4f786f
+PODFILE CHECKSUM: 3ab1dce705e73ef8da58ef1489bcc35c44e16745
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0
