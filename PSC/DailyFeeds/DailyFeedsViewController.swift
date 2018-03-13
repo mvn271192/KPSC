@@ -23,7 +23,9 @@ class DailyFeedsViewController: UIViewController, UICollectionViewDelegate, UICo
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let dailyFeeds = Database.database().reference(withPath: DAILY_FEEDS)
+        dailyFeeds.keepSynced(true)
+        self.getData();
         
 
         // Do any additional setup after loading the view.
@@ -38,26 +40,14 @@ class DailyFeedsViewController: UIViewController, UICollectionViewDelegate, UICo
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 10
+        return mDailyFeeds.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) 
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! DailyFeedsCollectionViewCell
         
-        // DispatchQueue.global(qos: .background).async {
-        
-//
-//        if indexPath.row % 2 == 0
-//        {
-//            cell.backgroundColor = .red
-//        }
-//        else
-//        {
-//            cell.backgroundColor = .yellow
-//        }
-//
-        //   }
-        
+        cell.setDailyFeeds(dailyFeeds: mDailyFeeds[indexPath.row])
+      
         
         return cell
     }
@@ -109,7 +99,7 @@ class DailyFeedsViewController: UIViewController, UICollectionViewDelegate, UICo
                     
                     
                 }
-                
+                self.mDailyFeeds.sort(by: {$0.date > $1.date})
                 self.mCollectionView.reloadData()
             }
         }
