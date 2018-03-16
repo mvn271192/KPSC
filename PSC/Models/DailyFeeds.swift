@@ -18,6 +18,7 @@ class DailyFeeds {
     var imageURL:String?
     var answer:String?
     var date:Int!
+    var size:ContentLength = .Default
     
     init(snapshot snap:DataSnapshot!) {
         
@@ -38,6 +39,16 @@ class DailyFeeds {
                 {
                     self.title = (title as! String)
                     self.textData = (textdata as! String)
+                    guard let txtCount = self.textData?.count else {return}
+                    guard let titleCount = self.title?.count else {return}
+                    if ((txtCount + titleCount) > 700)
+                    {
+                        self.size = .Extra_large
+                    }
+                    else if ((txtCount + titleCount) > 500)
+                    {
+                        self.size = .Large
+                    }
                 }
                
                 break
@@ -54,22 +65,21 @@ class DailyFeeds {
                 {
                     self.title = (title as! String)
                     self.answer = (ans as! String)
+                    guard let ansCount = self.answer?.count else {return}
+                    guard let titleCount = self.title?.count else {return}
+                    if ((ansCount + titleCount) > 500)
+                    {
+                        self.size = .Extra_large
+                    }
+                    else if ((ansCount + titleCount) > 300)
+                    {
+                        self.size = .Large
+                    }
                 }
                 break
             
             }
-//            let notifications = notificationData.values
-//            if (notifications.count > 0)
-//            {
-//                for item in notifications
-//                {
-//
-//                    let notification = Notification(dataDictionary: item as! NSMutableDictionary)
-//                    self.notifications.append(notification)
-//
-//                }
-//                self.notifications.sort(by: {$0.dateStamp > $1.dateStamp})
-//            }
+
             
         }
     }

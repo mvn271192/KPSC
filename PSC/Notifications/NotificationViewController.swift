@@ -107,7 +107,12 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
     
     func getNotifications()
     {
-        common.fireBaseMethods.getValuesFromFireBase(root: NOTIFICATION, limit: 100, orderBy: "date") { (success, snapshot) in
+        let nsActivity = common.setActitvityIndicator(inView: self.view)
+        DispatchQueue.main.async {
+             nsActivity.startAnimating()
+        }
+       
+        common.fireBaseMethods.getValuesFromFireBase(root: NOTIFICATION, limit: 100, orderBy: "date") { [unowned self] (success, snapshot) in
             
             if snapshot.childrenCount > 0
             {
@@ -121,7 +126,12 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
                     
                 }
                 
-                self.mNotificationTableView.reloadData()
+                DispatchQueue.main.async {
+                    
+                    self.mNotificationTableView.reloadData()
+                    nsActivity.stopAnimating()
+                }
+                
             }
         }
     }

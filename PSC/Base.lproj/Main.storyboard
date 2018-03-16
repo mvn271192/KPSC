@@ -48,7 +48,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AGN-5j-aHc">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UyM-5C-Qa2">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
@@ -726,7 +726,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="qLX-8I-5zB" kind="relationship" relationship="viewControllers" id="Pxs-Qa-TMt"/>
-                        <segue destination="e0N-QL-EGk" kind="relationship" relationship="viewControllers" id="Fsd-Fz-8hl"/>
                         <segue destination="lWW-eD-kYl" kind="relationship" relationship="viewControllers" id="NTV-lP-IMZ"/>
                         <segue destination="3sA-Xt-gga" kind="relationship" relationship="viewControllers" id="vnn-1v-oHG"/>
                     </connections>
@@ -788,17 +787,23 @@
                                                     <rect key="frame" x="182.5" y="167" width="182.5" height="30"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DxO-Bv-50O">
-                                                            <rect key="frame" x="83.5" y="0.0" width="94" height="30"/>
+                                                            <rect key="frame" x="73.5" y="0.0" width="94" height="30"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPG-Nb-6cV">
                                                                     <rect key="frame" x="0.0" y="0.5" width="37" height="29"/>
                                                                     <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
                                                                     <state key="normal" title="Save"/>
+                                                                    <connections>
+                                                                        <action selector="saveButtonclick:" destination="xfd-Da-Pme" eventType="touchUpInside" id="Ywg-Nm-9B7"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7i-Eq-xdd">
                                                                     <rect key="frame" x="57" y="0.5" width="37" height="29"/>
                                                                     <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
                                                                     <state key="normal" title="Share"/>
+                                                                    <connections>
+                                                                        <action selector="shareButtonClick:" destination="xfd-Da-Pme" eventType="touchUpInside" id="dSo-QD-kFo"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <constraints>
@@ -811,7 +816,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="1oV-FU-5oR"/>
                                                         <constraint firstAttribute="bottom" secondItem="DxO-Bv-50O" secondAttribute="bottom" id="IYH-FZ-iOh"/>
                                                         <constraint firstItem="DxO-Bv-50O" firstAttribute="top" secondItem="hED-ry-Xhh" secondAttribute="top" id="VvO-14-2WT"/>
-                                                        <constraint firstAttribute="trailing" secondItem="DxO-Bv-50O" secondAttribute="trailing" constant="5" id="XY0-Ab-Um6"/>
+                                                        <constraint firstAttribute="trailing" secondItem="DxO-Bv-50O" secondAttribute="trailing" constant="15" id="XY0-Ab-Um6"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
