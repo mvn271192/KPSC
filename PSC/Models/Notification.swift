@@ -36,9 +36,29 @@ class Notification {
         }
     }
     
+    init(dataSnapshot: DataSnapshot) {
+        
+        let notificationData = dataSnapshot.value as! Dictionary<String,AnyObject>
+        guard let date = notificationData["date"] else { return }
+        
+        self.dateStamp = date as! Int
+        self.titile = notificationData["title"] as! String
+        self.content = notificationData["content"] as! String
+        if let url = notificationData["url"] as? String
+        {
+            self.link = url
+        }
+        
+        if let imageUrl = notificationData["imageURL"] as? String
+        {
+            self.imageUrl = imageUrl
+        }
+        
+    }
+    
 }
 
-struct OrderBydate
+class OrderBydate
 {
     var date: String!
     var notifications: [Notification] = []

@@ -16,6 +16,7 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
     
     let cellIdentifier = "notificationCell"
     let common = Common.common
+    var refreshControl:UIRefreshControl!
     
     @IBOutlet weak var mNotificationTableView: UITableView!
     
@@ -25,6 +26,7 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
         notifiRef.keepSynced(true)
         
         self.getNotifications()
+        self.setRefreshControll()
         
     
 
@@ -92,6 +94,26 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
         self.performSegue(withIdentifier: "notificationDetail", sender: mNotificationList[indexPath.section].notifications[indexPath.row])
     }
     
+    // MARK: - Refresh controlls
+    
+    func setRefreshControll()
+    {
+        
+        refreshControl = UIRefreshControl()
+        //refreshControl.backgroundColor = UIColor.white
+        //refreshControl.tintColor = UIColor.green
+        refreshControl.attributedTitle = NSAttributedString(string: "Refreshing data...")
+        refreshControl.addTarget(self, action: #selector(self.refresh(sender:)), for: UIControlEvents.valueChanged)
+        mNotificationTableView.addSubview(refreshControl)
+    }
+    
+    @objc func refresh(sender:AnyObject)
+    {
+        
+        self.getLatestNotifications()
+        
+    }
+    
     // MARK: - Navigation
 
     
@@ -104,6 +126,7 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
     }
 
    
+    // MARK: - Firebase Methods
     
     func getNotifications()
     {
@@ -119,7 +142,6 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
                 for item in snapshot.children
                 {
                     let snap = item as! DataSnapshot
-                    print(snap)
                     let order = OrderBydate(snapshot: snap)
                     self.mNotificationList.insert(order, at: 0)
                     
@@ -135,5 +157,46 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
             }
         }
     }
+    
+    func getLatestNotifications()
+    {
+        
+        let latestTimeStamp =  mNotificationList.first?.notifications.first?.dateStamp
+        let rootNode = NOTIFICATION + "/" + (mNotificationList.first?.date)!
+        common.fireBaseMethods.getLatestValuesFromFireBase(root:rootNode , startValue: latestTimeStamp! + 1, orderBy: "date") { [unowned self] (success, snapshot) in
+            
+            
+            if snapshot.childrenCount > 0
+            {
+                for item in snapshot.children
+                {
+                    let snap = item as! DataSnapshot
+                    
+                    let notification = Notification(dataSnapshot: snap)
+                    if !((self.mNotificationList.first?.notifications.contains(where: { $0.dateStamp == notification.dateStamp}))!)
+                    {
+                        
+                        DispatchQueue.main.async
+                            {
+                             self.mNotificationList.first?.notifications.insert(notification, at: 0)
+                             self.mNotificationTableView.beginUpdates()
+                                self.mNotificationTableView.insertRows(at: [NSIndexPath(item: 0, section: 0) as IndexPath], with: .fade)
+                             self.mNotificationTableView.endUpdates()
+                        
+                        }
+                        
+                    }
+                    
+                    
+                }
+                
+                
+                
+            }
+            self.refreshControl.endRefreshing()
+        }
+    }
 
 }
+
+

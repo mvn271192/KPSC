@@ -11,7 +11,7 @@ import Firebase
 import FirebaseDatabase
 
 class DailyFeedsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDataSourcePrefetching, UICollectionViewDelegateFlowLayout  {
-
+    
     @IBOutlet weak var mCollectionView: UICollectionView!
     var mDailyFeeds:[DailyFeeds] = []
     fileprivate let reuseIdentifier = "collectionViewCell"
@@ -22,25 +22,26 @@ class DailyFeedsViewController: UIViewController, UICollectionViewDelegate, UICo
     var refreshControl:UIRefreshControl!
     
     let common = Common.common
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         let dailyFeeds = Database.database().reference(withPath: DAILY_FEEDS)
         dailyFeeds.keepSynced(true)
         self.getData();
         self.setRefreshControll()
         
         
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-     // MARK: - Refresh controlls
+    // MARK: - Refresh controlls
     
     func setRefreshControll()
     {
@@ -53,14 +54,11 @@ class DailyFeedsViewController: UIViewController, UICollectionViewDelegate, UICo
         mCollectionView.addSubview(refreshControl)
     }
     
-    @objc func refresh(sender:AnyObject) {
-//       let timer = Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(delayedAction), userInfo: nil, repeats: false)
+    @objc func refresh(sender:AnyObject)
+    {
+       
         self.getLatestData()
         
-    }
-    @objc func delayedAction()
-    {
-        refreshControl.endRefreshing();
     }
     
     // MARK: - Collection View Data Source
@@ -70,14 +68,14 @@ class DailyFeedsViewController: UIViewController, UICollectionViewDelegate, UICo
         return mDailyFeeds.count
     }
     
-   
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! DailyFeedsCollectionViewCell
         
         cell.setDailyFeeds(dailyFeeds: mDailyFeeds[indexPath.row])
         cell.tag = indexPath.row
-      
+        
         
         return cell
     }
@@ -100,7 +98,7 @@ class DailyFeedsViewController: UIViewController, UICollectionViewDelegate, UICo
         case .Extra_large:
             height = 350
             break
-        
+            
         }
         
         return CGSize(width: widthPerItem, height: height)
@@ -125,7 +123,7 @@ class DailyFeedsViewController: UIViewController, UICollectionViewDelegate, UICo
         
     }
     
-   
+    
     
     // MARK: - FireBase Methods
     
@@ -161,6 +159,7 @@ class DailyFeedsViewController: UIViewController, UICollectionViewDelegate, UICo
         let latestTimeStamp = mDailyFeeds.first?.date
         common.fireBaseMethods.getLatestValuesFromFireBase(root:DAILY_FEEDS , startValue: latestTimeStamp! + 1, orderBy: "date") { [unowned self] (success, snapshot) in
             
+           
             if snapshot.childrenCount > 0
             {
                 for item in snapshot.children
@@ -169,10 +168,10 @@ class DailyFeedsViewController: UIViewController, UICollectionViewDelegate, UICo
                     let order = DailyFeeds(snapshot: snap)
                     if !(self.mDailyFeeds.contains(where: { $0.date == order.date}))
                     {
-                        self.mDailyFeeds.insert(order, at: 0)
+                        
                         DispatchQueue.main.async
                             {
-                                
+                                self.mDailyFeeds.insert(order, at: 0)
                                 self.mCollectionView.performBatchUpdates({ [weak self] () -> Void in
                                     (self?.mCollectionView.insertItems(at: [NSIndexPath(row: 0, section: 0) as IndexPath]))
                                     
@@ -190,15 +189,15 @@ class DailyFeedsViewController: UIViewController, UICollectionViewDelegate, UICo
             self.refreshControl.endRefreshing()
         }
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
